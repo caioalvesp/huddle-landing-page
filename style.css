@@ -104,22 +104,26 @@ main {
       'logo'
       'container'
       'social';
-    padding: 2rem 6rem;
+    padding: 2rem 3rem;
   }
 
   .logo {
     grid-area: logo;
-    width: 15%;
+    width: 20%;
+    margin-bottom: 7rem;
   }
 
   .container {
     grid-area: container;
-    flex-direction: row;
+    /* flex-direction: row;
+    gap: 3.5rem; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 3.5rem;
   }
 
   .mockup {
-    max-width: 50%;
+    max-width: 100%;
   }
 
   .description {
