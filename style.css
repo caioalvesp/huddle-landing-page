@@ -36,7 +36,7 @@ main {
   margin-bottom: 4rem;
 }
 
-.container h1 {
+.description h1 {
   font-family: 'Poppins', sans-serif;
   font-size: 1.5rem;
   font-weight: 600;
@@ -44,18 +44,18 @@ main {
   margin-bottom: 1rem;
 }
 
-.container p {
+.description p {
   font-family: 'Open Sans', sans-serif;
   line-height: 1.5rem;
   margin-bottom: 1.5rem;
 }
 
-.container a {
+.description a {
   background-color: white;
   color: var(--violet);
   font-family: 'Open Sans', sans-serif;
   font-size: 0.8rem;
-  width: 13rem;
+  min-width: 13rem;
   padding: 1rem;
   align-self: center;
   border-radius: 2rem;
@@ -63,7 +63,7 @@ main {
   margin-bottom: 4rem;
 }
 
-.container a:hover {
+.description a:hover {
   background-color: var(--soft-magenta);
   color: white;
 }
@@ -90,4 +90,61 @@ main {
 .social-icons i:hover {
   color: var(--soft-magenta);
   border: var(--soft-magenta) solid 0.1rem;
+}
+
+@media (min-width: 1280px) {
+  body {
+    background-image: url(images/bg-desktop.svg);
+    background-size: cover;
+  }
+
+  main {
+    display: grid;
+    grid-template-areas:
+      'logo'
+      'container'
+      'social';
+    padding: 2rem 6rem;
+  }
+
+  .logo {
+    grid-area: logo;
+    width: 15%;
+  }
+
+  .container {
+    grid-area: container;
+    flex-direction: row;
+    gap: 3.5rem;
+  }
+
+  .mockup {
+    max-width: 50%;
+  }
+
+  .description {
+    text-align: left;
+  }
+
+  .description h1 {
+    font-size: 2.5rem;
+    line-height: 4rem;
+  }
+
+  .description p {
+    margin-bottom: 2.5rem;
+  }
+
+  .description a {
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 1rem 4rem;
+  }
+
+  .social-icons {
+    grid-area: social;
+    margin: 0;
+    justify-self: flex-end;
+    gap: 1rem;
+  }
 }
